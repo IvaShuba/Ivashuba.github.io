@@ -151,7 +151,7 @@
         Edge AI & Embedded Systems Engineer  
         Smart Automation • On-Prem ML • Industrial Electronics
     </p>
-    <a href="https://github.com/yourprofile" target="_blank">View GitHub</a>
+    <a href="https://github.com/IvaShuba" target="_blank">View GitHub</a>
 </header>
 
 <section>
@@ -181,6 +181,66 @@
 
   <div class="grid">
     <div class="card">
+      <h3>Edge Automation Infrastructure</h3>
+      <p>
+      ESP32-to-Cloud architecture using MQTT over TLS, 
+      Dockerized gateway services, and reliable data handling for secure IoT automation.
+      </p>
+      <button class="toggle" onclick="toggle(this)">Details</button>
+      <div class="hidden">
+        <p>
+        • MQTT v3.1.1 over TLS 1.2 communication<br> 
+          • Custom PKI with self‑signed Root CA<br> 
+          • Offline data buffering and cloud sync<br> 
+          • Dockerized gateway: Mosquitto, Python logic, OTA server
+        </p>
+        <a href="https://github.com/IvaShuba/Secure-SSL-TLS-IoT-Gateway-with-Docker-ESP32">View Repository</a>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3>Discrete 2-Bit Microcontroller (TTL Logic)</h3>
+      <p>
+      The work includes ALU design, SRAM implementation, opcode handling, timing logic, and full breadboard assembly.
+      </p>
+      <button class="toggle" onclick="toggle(this)">Details</button>
+      <div class="hidden">
+        <p>
+        - Modular CPU architecture<br>
+        - Custom 2-bit ALU<br>
+        - Discrete SRAM implementation<br>
+        - Data registers implementation<br>
+        - Opcode decoding and execution control<br>
+        - Clock generation using NE555<br>
+        - Real hardware debugging on breadboards<br>
+        </p>
+        <a href="https://github.com/IvaShuba/Design-and-Implementation-of-a-Simple-2-bit-Microcontroller">View Repository</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Smart Greenhouse – Master/Slave MCU System</h3>
+      <p>
+        Embedded greenhouse control system built on a two‑node architecture:
+        Master (Arduino Uno) and Slave (ATmega328PB). Implements SPI communication,
+        sensor fusion with EMA filtering, actuator control, LCD interface, and
+        low‑power operation with sleep modes.
+      </p>
+      <button class="toggle" onclick="toggle(this)">Details</button>
+      <div class="hidden">
+        <p>
+          • SPI master–slave protocol with 8 command types<br>
+          • EMA‑filtered temperature, humidity, and soil moisture<br>
+          • Deep‑sleep slave node with interrupt wake‑up<br>
+          • LCD (I2C) interface and UART JSON output<br>
+          • Servo‑controlled ventilation, pump & fan automation<br>
+          • Structured SensorData package with checksum
+        </p>
+        <a href="#">View Repository</a>
+      </div>
+    </div>
+    
+    <div class="card">
       <h3>Local Multi-Model LLM Server</h3>
       <p>
       Self-hosted LLM system with dynamic model selection (1B, Mistral 7B, Qwen 7B 4Q).
@@ -190,34 +250,15 @@
       <button class="toggle" onclick="toggle(this)">Details</button>
       <div class="hidden">
         <p>
-        • Quantized models for constrained VRAM<br>
+        • Quantized models for constrained RAM<br>
         • Branch-based memory architecture<br>
         • Modular backend separation<br>
         • Fully local deployment (no cloud)
         </p>
-        <a href="#">View Repository</a>
+        <!--a href="#">View Repository</a-->
       </div>
     </div>
-  
-    <div class="card">
-      <h3>FaceFusion Containerized Deployment</h3>
-      <p>
-      Rebuilt and deployed FaceFusion in isolated Docker environment.
-      Integrated upload pipeline, inference workflow, and resource control
-      for CPU-only operation.
-      </p>
-      <button class="toggle" onclick="toggle(this)">Details</button>
-      <div class="hidden">
-        <p>
-        • Web interface + backend integration<br>
-        • File lifecycle management<br>
-        • Optimized inference for limited hardware<br>
-        • Controlled container orchestration
-        </p>
-        <a href="#">View Repository</a>
-      </div>
-    </div>
-  
+    
     <div class="card">
       <h3>Stable Diffusion XL – Constrained Hardware Testing</h3>
       <p>
@@ -232,26 +273,11 @@
         • Comparative inference testing<br>
         • CPU vs GPU behavior analysis
         </p>
-        <a href="#">View Repository</a>
+        <!--a href="#">View Repository</a-->
       </div>
     </div>
   
-    <div class="card">
-      <h3>Edge Automation Infrastructure</h3>
-      <p>
-      Local server architecture combining MQTT, Docker services,
-      and hardware integration for smart automation scenarios.
-      </p>
-      <button class="toggle" onclick="toggle(this)">Details</button>
-      <div class="hidden">
-        <p>
-        • Service isolation strategy<br>
-        • Network segmentation<br>
-        • Local data persistence<br>
-        • On-demand container management
-        </p>
-        <a href="#">View Repository</a>
-      </div>
+    
     </div>
   
   </div>
