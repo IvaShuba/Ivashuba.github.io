@@ -7,13 +7,15 @@
   
   <style>
     :root {
-        --bg: #0f172a;
-        --card: #1e293b;
-        --accent: #38bdf8;
-        --text: #e2e8f0;
-        --muted: #94a3b8;
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --accent: #2563eb;
+        --text: #0f172a;
+        --muted: #475569;
+        --border: #dbe4ee;
     }
-    
+
+
     * {
         box-sizing: border-box;
     }
@@ -29,7 +31,7 @@
     header {
         padding: 4rem 2rem;
         text-align: center;
-        background: linear-gradient(135deg, #0f172a, #1e293b);
+        background: linear-gradient(135deg, #b5c7f1, #679bee);
     }
     
     header h1 {
@@ -48,7 +50,7 @@
         margin-top: 1.5rem;
         padding: 0.6rem 1.2rem;
         background: var(--accent);
-        color: #0f172a;
+        color: var(--text);
         font-weight: bold;
         border-radius: 6px;
         text-decoration: none;
@@ -62,7 +64,7 @@
     section {
         max-width: 1100px;
         margin: auto;
-        padding: 3rem 2rem;
+        padding: 1rem 2rem;
     }
     
     h2 {
@@ -83,7 +85,7 @@
         padding: 1.5rem;
         border-radius: 10px;
         transition: 0.3s;
-
+        border: 1px solid var(--border);
         display: flex;
         flex-direction: column;
     }
@@ -131,13 +133,26 @@
         padding: 0.5rem 0.9rem;
         border-radius: 6px;
         font-size: 0.9rem;
+        color: var(--text);
+        border: 1px solid var(--border);
+    }
+    .skills-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .skills-block h3 {
+        color: var(--accent);
+        margin-bottom: 0.8rem;
     }
     
     footer {
         text-align: center;
         padding: 2rem;
-        background: #0b1220;
-        color: var(--muted);
+        background: linear-gradient(135deg, #b5c7f1, #679bee);
+        color: var(--text);
     }
     
     button.toggle {
@@ -161,31 +176,61 @@
 <header>
     <h1>Ivan Shuba</h1>
     <p>
-        Edge AI & Embedded Systems Engineer  
-        Smart Automation • On-Prem ML • Industrial Electronics
+        Embedded & Edge Systems Engineer  
+        Industrial Electronics • IoT Infrastructure • Local AI Systems
     </p>
     <a href="https://github.com/IvaShuba" target="_blank">View GitHub</a>
 </header>
 
 <section>
-    <h2>System Engineering Focus</h2>
+    <h2>Embedded & System Engineering</h2>
+
     <p>
-        I design and deploy local AI systems integrated with embedded hardware and automation infrastructure.
-        My focus is on on-prem inference, constrained hardware optimization, and practical system integration
-        without relying on external cloud services.
+        I develop embedded, electronics, and edge-computing systems combining hardware,
+        software, and infrastructure components. My work includes PCB design, embedded
+        firmware, IoT integration, industrial communication, local AI deployment,
+        and Linux-based backend services for automation and monitoring systems.
     </p>
 
-    <div class="skills">
-        <div class="skill">Embedded C / C++</div>
-        <div class="skill">Python</div>
-        <div class="skill">Docker</div>
-        <div class="skill">MQTT</div>
-        <div class="skill">LLM Deployment</div>
-        <div class="skill">Quantization</div>
-        <div class="skill">Edge Inference</div>
-        <div class="skill">Linux (Debian)</div>
-        <div class="skill">IoT Integration</div>
-        <div class="skill">System Architecture</div>
+    <div class="skills-wrapper">
+
+        <div class="skills-block">
+            <h3>Embedded & Electronics</h3>
+
+            <div class="skills">
+                <div class="skill">Embedded C / C++</div>
+                <div class="skill">PCB Design (KiCad)</div>
+                <div class="skill">LTspice Simulation</div>
+                <div class="skill">MATLAB / Simulink</div>
+                <div class="skill">System Integration & Prototyping</div>
+            </div>
+        </div>
+
+        <div class="skills-block">
+            <h3>Infrastructure & IoT</h3>
+
+            <div class="skills">
+                <div class="skill">Linux (Debian)</div>
+                <div class="skill">Docker & Containerized Services</div>
+                <div class="skill">IoT System Design & Deployment</div>
+                <div class="skill">MQTT / HTTP / BLE</div>
+                <div class="skill">Node-RED Integration</div>
+                <div class="skill">Git & VS Code</div>
+            </div>
+        </div>
+
+        <div class="skills-block">
+            <h3>AI & Computer Vision</h3>
+
+            <div class="skills">
+                <div class="skill">Edge AI & Computer Vision</div>
+                <div class="skill">Local LLM Deployment</div>
+                <div class="skill">TensorFlow</div>
+                <div class="skill">OpenCV</div>
+                <div class="skill">Python</div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -232,6 +277,27 @@
     </div>
 
     <div class="card">
+      <h3>Industrial Conveyor Vision Pipeline</h3>
+      <p>
+      Computer vision pipeline for industrial conveyor monitoring using TensorFlow,
+      OpenCV, and MobileNetV2. The system captures live camera frames, preprocesses
+      images, and performs real-time classification of conveyor states.
+      </p>
+      <button class="toggle" onclick="toggle(this)">Details</button>
+      <div class="hidden">
+        <p>
+        • Real-time conveyor state classification (3 classes)<br>
+        • Transfer learning with MobileNetV2<br>
+        • OpenCV-based live camera pipeline<br>
+        • Custom industrial image dataset collection<br>
+        • TensorFlow training, validation, and fine tuning<br>
+        • Edge-device oriented lightweight model design
+        </p>
+        <a href="https://github.com/IvaShuba/Computer-Vision-Pipeline-for-Conveyor-Monitoring" target="_blank">View Repository</a>
+      </div>
+    </div>
+    
+    <div class="card">
       <h3>Smart Greenhouse – Master/Slave MCU System</h3>
       <p>
         Embedded greenhouse control system built on a two‑node architecture:
@@ -272,39 +338,17 @@
         <a href="https://github.com/IvaShuba/Design-and-Implementation-of-a-Simple-2-bit-Microcontroller" target="_blank">View Repository</a>
       </div>
     </div>
-      
     
-    <div class="card">
-      <h3>Stable Diffusion XL – Constrained Hardware Testing</h3>
-      <p>
-      Experimental deployment of SDXL on legacy workstation (W541).
-      Focused on memory limits, model optimization and inference trade-offs.
-      </p>
-      <button class="toggle" onclick="toggle(this)">Details</button>
-      <div class="hidden">
-        <p>
-        • VRAM-aware configuration<br>
-        • Performance tuning experiments<br>
-        • Comparative inference testing<br>
-        • CPU vs GPU behavior analysis
-        </p>
-        <!--a href="#">View Repository</a-->
-      </div>
-    </div>
-  
-    
-    </div>
-  
   </div>
 </section>
 
 <section>
   <h2>Engineering Approach</h2>
-  <p>
-  I prioritize system reliability, hardware constraints, and long-term maintainability.
-  Instead of relying on managed cloud APIs, I focus on understanding model behavior,
-  resource usage, and integration boundaries within embedded and automation environments.
-  </p>
+  <ul>
+    <li>I prioritize system reliability, hardware constraints, and long-term maintainability.</li>
+    <li>Instead of relying on managed cloud APIs, I focus on understanding model behavior, resource usage, and integration boundaries within embedded and automation environments.</li>
+  </ul>
+  
 </section>
 
 <footer>
